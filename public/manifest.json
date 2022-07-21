@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Developer Navigation",
+  "version": "0.0.1",
+  "description": "A browser plugin to help developers with navigation.",
+  "icons":
+    {
+      "16": "icons/icons8-compass-16.png",
+      "48": "icons/icons8-compass-48.png",
+      "128": "icons/icons8-compass-128.png"
+    },
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*", "https://app.circleci.com/pipelines/*"],
+      "js": ["navigationBar.js"],
+      "css": ["navigationBar.css"]
+    }
+  ]
+}
